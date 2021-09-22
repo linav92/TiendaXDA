@@ -1,0 +1,133 @@
+.navigation {
+  position: relative;
+  @include desktop-breakpoint{
+    padding: 1.4rem 0.5rem;
+  }
+
+  @include tablet-breakpoint {
+    padding: 1.4rem 0.5rem;
+  }
+}
+.navigation__logo {
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  background: $smoky-black;
+  @include desktop-breakpoint {
+    padding: 2rem 1rem;
+  }
+
+  @include tablet-breakpoint {
+    padding: 2rem 1rem;
+  }
+}
+
+.navigation__text{
+  color: $white;
+  font-size: $font-size-xx-large;
+  font-family: $old-standard;
+  text-decoration: none;
+}
+.collapsible {
+  text-align: right;
+  label {
+    display: block;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: 1.5em;
+    font-size: $font-size-xx-large;
+  }
+
+  @include desktop-breakpoint{
+    label {
+      display: none;
+    }
+  }
+  @include tablet-breakpoint{
+    label {
+      display: none;
+    }
+  }
+}
+
+#menu{
+  display: none;
+}
+
+.navigation__input:checked + .navigation__container {
+  clip-path: circle(100% at center);
+  max-height: 100%;
+}
+
+.navigation__container {
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  @include desktop-breakpoint{
+    .navigation__container {
+      min-height: 100%;
+      padding: .5em 3em .5em 0;
+      overflow: visible;
+    }
+  }
+
+  @include tablet-breakpoint {
+    .navigation__container {
+      min-height: 100%;
+      padding: .2em 1em .2em 0;
+      overflow: visible;
+    }
+  }
+}
+
+.navigation__item {
+  a {
+    display: block;
+    text-align: left;
+    padding: 1em;
+    font-family: $raleway;
+    font-weight: bold;
+    font-size: $font-size-medium;
+    color: $smoky-black;
+    text-decoration: none;
+
+    &:hover {
+      color: $granite-gray; 
+    }
+  }
+  @include desktop-breakpoint{
+    a {
+      font-size: 1rem;
+      font-weight: 500;
+      font-weight: bold;
+      font-size: $font-size-medium;
+      color: $smoky-black;
+    }
+  }
+
+  @include tablet-breakpoint {
+    a {
+      font-size: .5rem;
+      font-weight: 400;
+      font-weight: bold;
+      font-size: $font-size-medium;
+      color: $smoky-black;
+    }
+  }
+}
+
+.navigation__list{
+  @include desktop-breakpoint{
+    display: flex;
+    justify-content: flex-end;
+    padding: inherit;
+    margin: inherit;
+  }
+
+  @include tablet-breakpoint{
+    display: flex;
+    justify-content: flex-end;
+    padding: inherit;
+    margin: inherit;
+  }
+}
