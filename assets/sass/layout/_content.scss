@@ -21,7 +21,7 @@
 }
   
 .header {
-  background: url(/assets/images/imagen1.png);
+  background: url(assets/images/imagen1.png);
   height: 50vh;
   background-size: cover;
   @include desktop-breakpoint{
