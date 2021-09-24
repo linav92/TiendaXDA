@@ -12,21 +12,30 @@
   position: absolute;
   top: 0em;
   left: 0em;
+  padding: 1.3rem 1.2rem;
   background: $smoky-black;
+ 
   @include desktop-breakpoint {
     padding: 2rem 1rem;
   }
 
   @include tablet-breakpoint {
-    padding: 2rem 1rem;
+    padding: 2.3rem 1.3rem;
   }
 }
-
 .navigation__text{
   color: $white;
-  font-size: $font-size-xx-large;
+  font-size: $font-size-large;
   font-family: $old-standard;
   text-decoration: none;
+
+  @include desktop-breakpoint{
+    font-size: $font-size-xx-large;
+  }
+
+  @include tablet-breakpoint{
+    font-size: $font-size-x-large;
+  }
 }
 .collapsible {
   text-align: right;
@@ -54,9 +63,9 @@
   display: none;
 }
 
-.navigation__input:checked + .navigation__container {
-  clip-path: circle(100% at center);
+input:checked ~ .navigation__list {
   max-height: 100%;
+  display: block;
 }
 
 .navigation__container {
@@ -83,7 +92,7 @@
 .navigation__item {
   a {
     display: block;
-    text-align: left;
+    text-align: center;
     padding: 1em;
     font-family: $raleway;
     font-weight: bold;
@@ -117,11 +126,14 @@
 }
 
 .navigation__list{
+  display: none;
+
   @include desktop-breakpoint{
     display: flex;
     justify-content: flex-end;
     padding: inherit;
     margin: inherit;
+    
   }
 
   @include tablet-breakpoint{
